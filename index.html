@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>Seafarer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src = "bower_components/angular/angular.min.js"></script>
+	<script src= "bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src = "bower_components/jquery/dist/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="w3.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/indexcss.css">
+	<script src="assets/script/indexscript.js"></script>
+	<script src = "app/app.config.js"></script>
+	<script src = "controller/homeCltr.js"></script>
+	<script src = "controller/aboutCltr.js"></script>
+	<script src = "controller/gallaryCltr.js"></script>
+	<script src = "controller/eventsCltr.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="w3-light-grey">
+	<div ng-app ="myApp">
+		<div class="fixnavbar">
+			<nav class="navbar navbar-inverse w3-card-4">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">Seafarer</a>
+						<button type="button" class="navbar-toggle" id="toggleBtn" >
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>                        
+						</button>
+					</div>
+					<div id="toggledata">	
+						<ul class="nav navbar-nav">
+							<li class="active"><a ui-sref="home">Home</a></li>
+							<li> <a ui-sref="gallary">Gallary</a></li>
+							<li> <a ui-sref="events">Events</a></li>
+							<li> <a ui-sref="about">about</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div ui-view>
+		</div>
+		<div class="quicklinks w3-row">
+			<div class="w3-col s6 w3-center">
+				<h3  style="color:#de5824;">contact us:</h3>
+				<p><span><i class="fa fa-envelope" aria-hidden="true"></i></span>seafarerngo@gmail.com</p>
+				<p><span><i class="fa fa-mobile" aria-hidden="true"></i></span>+91-7777985154</p>
+				<p><span><i class="fa fa-mobile" aria-hidden="true"></i></span>+91-9558815353</p>
+			</div>
+			<div class="w3-col s6 w3-center">
+				<h3 style="color:#de5824;">powered by:</h3>
+				<img class="logos" src="assets/images/nike.png">
+				<img class="logos" src="assets/images/adi.png">
+			</div>
+
+		</div>			
+		<div class="w3-container w3-black"><footer>Copyright  2013 - 2017. All rights Reserved RAOINFOTECH | An Icon Dictionary</footer></div>			
+	</div>
+</body>
+</html>
